@@ -5,8 +5,13 @@ if [ -z $1 ]; then
     exit
 fi
 
+port=22
+if [ ! -z $2 ]; then
+    port=$2
+fi
+
 echo $*
 
 brew services start tor
-proxychains4 nmap -sT -PN -n -sV -p 21 $1
+sudo proxychains4 nmap -sT -PN -n -sV -p $port $1
 brew services stop tor

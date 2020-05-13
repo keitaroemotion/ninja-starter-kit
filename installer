@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 cp scripts/* /usr/local/bin
-chmod +x /usr/local/bin/ninja-nmap
+chmod +x /usr/local/bin/ninja-*

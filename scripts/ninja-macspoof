@@ -1,0 +1,6 @@
+if [ -z $1 ]; then
+    echo 'you need url.'
+    exit
+fi
+
+sudo nmap -sS server $1 --spoof-mac 00:00:5e:00:53:00 
