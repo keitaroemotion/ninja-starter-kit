@@ -7,5 +7,6 @@ fi
 
 echo $*
 
-# sudo proxychains4 nmap -sT $*
-sudo proxychains4 nmap $*
+brew services start tor
+proxychains4 nmap -sT -PN -n -sV -p 21 $1
+brew services stop tor

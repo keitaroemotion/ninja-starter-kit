@@ -27,6 +27,7 @@ $ sudo nmap -sT -Pn --spoof-mac 00:00:5e:00:53:00 [Url]
 
 ## tor
 
+### curl
 tor app (non-browser-version: can be retrieved from homebrew/MacPorts) can be used with curl such as:
 
 ```
@@ -34,3 +35,18 @@ $ brew services start tor
 $ curl --socks5-hostname 127.0.0.1:9050 [Url]
 $ brew services stop tor
 ```
+
+### nmap
+
+```
+brew services start tor
+proxychains4 nmap -sT -PN -n -sV -p 21 [url]
+brew services stop tor
+```
+
+or 
+
+```
+ninja-nmap [url]
+```
+
