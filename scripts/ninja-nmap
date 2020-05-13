@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+    echo 'you need url.'
+    exit
+fi
+
+echo $*
+
+# sudo proxychains4 nmap -sT $*
+sudo proxychains4 nmap $*
