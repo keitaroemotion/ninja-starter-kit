@@ -20,7 +20,7 @@ you can scan open ports or target server with:
 sudo nmap -sS server [url]
 ```
 
-you can disguise your MAC address
+you can disguise your MAC address (not recommended: please use it ONLY for your own website)
 ```
 $ sudo nmap -sT -Pn --spoof-mac 00:00:5e:00:53:00 [Url]
 ```
